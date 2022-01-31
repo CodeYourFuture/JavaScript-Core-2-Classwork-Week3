@@ -1,5 +1,5 @@
 {
-  "name": "CYF-Classwork-Template",
+  "name": "javascript-core-2-classwork-week3-london8",
   "version": "1.0.0",
   "license": "CC-BY-SA-4.0",
   "description": "You must update this package",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodeYourFuture/CYF-Classwork-Template.git"
+    "url": "git+https://github.com/CodeYourFuture/JavaScript-Core-2-Classwork-Week3-London8.git"
   },
   "bugs": {
-    "url": "https://github.com/CodeYourFuture/CYF-Classwork-Template/issues"
+    "url": "https://github.com/CodeYourFuture/JavaScript-Core-2-Classwork-Week3-London8/issues"
   },
-  "homepage": "https://github.com/CodeYourFuture/CYF-Classwork-Template#readme",
+  "homepage": "https://github.com/CodeYourFuture/JavaScript-Core-2-Classwork-Week3-London8#readme",
   "devDependencies": {
     "jest": "^26.6.3"
   }
