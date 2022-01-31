@@ -1,7 +1,14 @@
 /*
+  To complete these exercises use vscode-live-server plugin to get live updates of your changes.
+  - Install the Live Server plugin
+  - Right click on index.html and select "Open with Live Server"
+*/
+
+/*
 Task 1
 =======
-Write JavaScript below that logs:
+
+Write JavaScript below that console.logs:
     1. all the "p" element nodes of the document,
     --> should log a list of nodes with a length of 6
 
@@ -11,7 +18,7 @@ Write JavaScript below that logs:
     3. the element with id "jumbotron-text"
     --> should log the "#jumbotron-text" node
 
-    4. all the "p" elements of contained inside  the .primary-content element node
+    4. all the "p" elements of contained inside the .primary-content element node
     --> should log a list of nodes with a length of 3
 
 */
