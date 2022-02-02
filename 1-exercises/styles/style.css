@@ -31,6 +31,14 @@ body {
   text-transform: uppercase;
 }
 
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-item--highlighted {
+  background-color: #ce5f31;
+}
+
 /* Buttons */
 .btn {
   border-radius: 0.15em;

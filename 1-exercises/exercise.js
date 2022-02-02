@@ -41,7 +41,6 @@ Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
 
-
 /*
 Task 4
 ======
