@@ -53,21 +53,20 @@
 				<div class="primary-content col-lg-8">
 					<div class="jumbotron">
 						<h1 class="display-3">Bikes for Refugees</h1>
-						<div id="jumbotron-text">
+						<div id="jumbotronText">
 							<p class="lead">Providing donated bikes and accessories to refugees and asylum seekers in Scotland.</p>
 						</div>
 						<hr class="my-4">
 						<div class="buttons">
 							<a id="bgrChangeBtn" class="btn btn-primary btn-lrg" href="#">Change colour</a>
 							<a id="alertBtn" class="btn btn-secondary btn-lrg" href="#">ALERT</a>
-							<a id="addTextBtn" class="btn btn-secondary btn-lrg" href="#">Add some text</a>
 							<a id="largerLinksBtn" class="btn btn-secondary btn-lrg" href="#">Larger links!</a>
 						</div>
 					</div>
-					<div style="display: flex">
-						<input class="form-control addArticle" type="textbox">
-						<button id="addArticleBtn" type="button" class="btn btn-primary">Add</button>
-					</div>		
+					<div style="display: flex" id="addArticle">
+						<input class="form-control add-article__input" id="addArticleInput" type="textbox">
+						<button class="btn btn-primary add-article__button" id="addArticleBtn" type="button">Add some text</button>
+					</div>
 					<h2 class="heading-underline">Learn more</h2>
 					<div id="mainArticles" class="articles">
 						<article class="article">
@@ -83,7 +82,7 @@
 					<div class="articles">
 						<article class="article row">
 							<a href="#">
-								
+
 					  	</a>
 							<div class="article-title article-title--sidebar">
 								<a href="#">Join us for our Spring fundraisers</a>

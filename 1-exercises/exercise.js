@@ -15,8 +15,8 @@ Write JavaScript below that console.logs:
     2. the first div element node
     --> should log the ".site-header" node
 
-    3. the element with id "jumbotron-text"
-    --> should log the "#jumbotron-text" node
+    3. the element with id "jumbotronText"
+    --> should log the "#jumbotronText" node
 
     4. all the "p" elements of contained inside the .primary-content element node
     --> should log a list of nodes with a length of 3
@@ -36,7 +36,8 @@ When a user clicks the 'ALERT' button, an alert box should pop up with the text 
 Task 3
 =======
 
-Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
+When a user clicks the 'Change colour' button, the background colour of the page should change to red.
+Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
 
@@ -44,14 +45,14 @@ Write JavaScript below that changes the background colour of the page when the '
 Task 4
 ======
 
-When a user clicks the 'Add some text' button, a new paragraph should be added below the buttons that says "Read more below."
+When a user clicks the 'Larger links!' button, the text of all links on the page should increase.
 */
-
 
 
 /*
 Task 5
 ======
 
-When the 'Larger links!' button is clicked, the text of all links on the page should increase.
+When a user clicks the 'Add some text' button, the text in the input field should be appended to the page as a new paragraph below it.
+Hint: the new paragraph should be appended to the element with id 'addArticle'.
 */
