@@ -1,4 +1,4 @@
-# JavaScript-Core-2-Classwork-Week3-London8
+# JavaScript-Core-2-Classwork-Week3
 
 This repo contains exercises for use in class.
 
