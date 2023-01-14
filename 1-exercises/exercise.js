@@ -22,15 +22,24 @@ Write JavaScript below that console.logs:
     --> should log a list of nodes with a length of 3
 
 */
+const allPTags = document.querySelectorAll("p");
+console.log(allPTags);
 
+console.log(document.querySelector(".site-header"));
 
+console.log(document.querySelector("#jumbotronText"));
+
+console.log(document.querySelectorAll(".primary-content p"));
 /*
 Task 2
 ======
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
-
+const buttonAlertKey = document.querySelector("#alertBtn");
+buttonAlertKey.addEventListener("click", () =>
+  alert("Thanks for visiting Bikes for Refugees!")
+);
 
 /*
 Task 3
@@ -39,7 +48,15 @@ Task 3
 When a user clicks the 'Change colour' button, the background colour of the page should change to red.
 Hint: can you do this with a CSS class instead of adding styles to the element?
 */
-
+const btnChange = document.querySelector("#bgrChangeBtn");
+const changingColor = document.querySelector("body");
+// btnChange.addEventListener(
+//   "click",
+//   () => (changingColor.style.backgroundColor = "red")
+// );
+btnChange.addEventListener("click", () =>
+  changingColor.classList.add("background--red")
+);
 
 /*
 Task 4
@@ -47,7 +64,12 @@ Task 4
 
 When a user clicks the 'Larger links!' button, the text of all links on the page should increase.
 */
-
+const largeBtn = document.querySelector("#largerLinksBtn");
+const allLinks = document.querySelectorAll("a");
+console.log(allLinks);
+largeBtn.addEventListener("click", () =>
+  allLinks.forEach((link) => (link.style.fontSize = "25px"))
+);
 
 /*
 Task 5
@@ -56,3 +78,26 @@ Task 5
 When a user clicks the 'Add some text' button, the text in the input field should be appended to the page as a new paragraph below it.
 Hint: the new paragraph should be appended to the element with id 'addArticle'.
 */
+const articleInput = document.querySelector("#addArticleInput"); // addArticleInput
+// console.log(articleInput);
+
+const addArticle = document.querySelector("#addArticleBtn");
+addArticle.addEventListener("click", () => {
+  const newArticleElement = document.createElement("article");
+  newArticleElement.className = "article";
+
+  const newParagraphElement = document.createElement("p");
+  newParagraphElement.innerText = articleInput.value;
+  newParagraphElement.className = "article-lead";
+
+  mainArticles.appendChild(newArticleElement);
+  newArticleElement.appendChild(newParagraphElement);
+  // console.log(articleInput.value)
+});
+
+// const newParagraphElement = document.createElement("p")
+// newParagraphElement.innerText = "Hey, thanks for visiting!"
+// newParagraphElement.className = "row"
+
+// const footerElement = document.querySelector("#navbarSupportedContent")
+// footerElement.appendChild(newParagraphElement)
