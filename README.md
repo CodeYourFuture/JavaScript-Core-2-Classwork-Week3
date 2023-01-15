@@ -26,7 +26,7 @@ Here are two examples, HTML and then JavaScript, of how the DOM might look like:
 ```
 
 ```js
-var document = {
+const document = {
   body: {
     h1: "Welcome",
     p: "Hello world!",
@@ -47,7 +47,7 @@ Both `.querySelector` and `querySelectorAll` accept a CSS selector as an input.
 Once you retrieve an element using `.querySelector`, you can attach an **event** to it. An event is any action that can be performed on that element. For now, we will just use the **click** event:
 
 ```js
-var myButton = document.querySelector("#myButton");
+const myButton = document.querySelector("#myButton");
 myButton.addEventListener("click", alertSomething);
 
 function alertSomething() {
@@ -60,14 +60,14 @@ You will notice in the example example that we passed a second argument to `addE
 The elements returned by `document.querySelector` have the same properties as a normal HTML element: for example, you can get access to their css **styles**.
 
 ```js
-var myElement = document.querySelector("#myElement");
+const myElement = document.querySelector("#myElement");
 myElement.style.backgroundColor = "red";
 ```
 
 Using the `document`, you can also create new elements. These elements will not appear until you append them as a child of another element though:
 
 ```js
-var paragraph = document.createElement("p"); // here we're just creating it, element is not visible yet
+const paragraph = document.createElement("p"); // here we're just creating it, element is not visible yet
 myElement.appendChild(paragraph); // now the element is added to our view, but it's empty
 ```
 
@@ -84,8 +84,8 @@ To retrieve an array of multiple elements (that match a specific class name for 
 
 ```js
 //change the background of all the paragraph items on our page
-var paragraphs = document.querySelectorAll("p");
-for (var i = 0; i < paragraphs.length; i++) {
+const paragraphs = document.querySelectorAll("p");
+for (let i = 0; i < paragraphs.length; i++) {
   paragraphs[i].style.backgroundColor = "blue";
 }
 ```
@@ -96,7 +96,7 @@ While it's really easy to change styles directly on elements using the `style` p
 
 ```js
 //before: <div id="myContainer"></div>
-var container = document.querySelector("#myContainer");
+const container = document.querySelector("#myContainer");
 container.className = "largeBlock";
 //after: <div id="myContainer" class="largeBlock"></div>
 ```
@@ -104,13 +104,13 @@ container.className = "largeBlock";
 To get the text from an Input field:
 
 ```js
-var updateTitleBtn = document.querySelector("#updateTitleBtn");
+const updateTitleBtn = document.querySelector("#updateTitleBtn");
 
 updateTitleBtn.addEventListener("click", function () {
-  var inputBox = document.querySelector("#titleInput");
-  var title = inputBox.value;
+  let inputBox = document.querySelector("#titleInput");
+  let title = inputBox.value;
 
-  var titleElement = document.querySelector("#lessonTitle");
+  let titleElement = document.querySelector("#lessonTitle");
   titleElement.innerText = title;
   inputBox.value = title;
 });
