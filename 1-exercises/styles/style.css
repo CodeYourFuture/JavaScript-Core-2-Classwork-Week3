@@ -39,6 +39,10 @@ body {
   background-color: #ce5f31;
 }
 
+.bg-color {
+  background-color: blue;
+}
+
 /* Buttons */
 .btn {
   border-radius: 0.15em;
