@@ -4,13 +4,15 @@
   - Right click on index.html and select "Open with Live Server"
 */
 
+console.log("Hello Saqib");
+
 /*
 Task 1
 =======
 
 Write JavaScript below that console.logs:
     1. all the "p" element nodes of the document,
-    --> should log a list of nodes with a length of 6
+    --> should log a list of nodes with a length of 6 .........// done
 
     2. the first div element node
     --> should log the ".site-header" node
@@ -22,7 +24,15 @@ Write JavaScript below that console.logs:
     --> should log a list of nodes with a length of 3
 
 */
+console.log(document.querySelectorAll("p"));
 
+console.log(document.querySelector(".site-header"));
+
+console.log(document.querySelector("#jumbotronText"));
+
+console.log(document.querySelector("div"));
+
+console.log(document.querySelectorAll(".primary-content p"));
 
 /*
 Task 2
@@ -30,7 +40,6 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
-
 
 /*
 Task 3
@@ -40,7 +49,6 @@ When a user clicks the 'Change colour' button, the background colour of the page
 Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
-
 /*
 Task 4
 ======
@@ -48,6 +56,9 @@ Task 4
 When a user clicks the 'Larger links!' button, the text of all links on the page should increase.
 */
 
+// larger {
+//   font-size: larger;
+// }                    ........changed in css
 
 /*
 Task 5
