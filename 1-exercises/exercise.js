@@ -55,6 +55,12 @@ When a user clicks the 'Change colour' button, the background colour of the page
 Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
+let bgrChangeBtn = document.querySelector("#bgrChangeBtn");
+function changeBackground() {
+  document.body.style.background = "red";
+}
+bgrChangeBtn.addEventListener("click", changeBackground);
+
 /*
 Task 4
 ======
@@ -69,10 +75,6 @@ largerLinksBtn.addEventListener("click", function () {
     link.classList.toggle("larger");
   }
 });
-
-// larger {
-//   font-size: larger;
-// }                    ........changed in css
 
 /*
 Task 5
