@@ -75,7 +75,7 @@ console.log(increaseText);
 increaseText.addEventListener('click', () => {
   console.log("hi");
   const body = document.querySelector('body');
-  body.style.fontSize = '8rem';
+  body.style.fontSize = '2rem';
 
 
 });
