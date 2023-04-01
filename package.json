@@ -5,6 +5,7 @@
   "description": "You must update this package",
   "scripts": {
     "test": "jest"
+    
   },
   "repository": {
     "type": "git",
