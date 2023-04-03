@@ -51,6 +51,10 @@ When a user clicks the 'Change colour' button, the background colour of the page
 Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
+const backgroundColor = document.querySelector("body");
+backgroundColor.classList.add("background--red");
+
+
 
 /*
 Task 4
@@ -58,6 +62,11 @@ Task 4
 
 When a user clicks the 'Larger links!' button, the text of all links on the page should increase.
 */
+
+const links = document.querySelectorAll("a");
+for(const aTag of links){
+  aTag.classList.add("larger");
+}
 
 
 /*
