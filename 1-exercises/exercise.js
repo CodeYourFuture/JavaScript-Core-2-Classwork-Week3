@@ -3,7 +3,7 @@
   - Install the Live Server plugin
   - Right click on index.html and select "Open with Live Server"
 */
-
+console.log("Does this work?")
 /*
 Task 1
 =======
@@ -22,7 +22,8 @@ Write JavaScript below that console.logs:
     --> should log a list of nodes with a length of 3
 
 */
-
+console.log(document.querySelectorAll("p"));
+console.log(document.querySelector("div"));
 
 /*
 Task 2
