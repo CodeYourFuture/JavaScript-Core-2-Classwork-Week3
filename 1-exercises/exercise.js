@@ -22,8 +22,13 @@ Write JavaScript below that console.logs:
     --> should log a list of nodes with a length of 3
 
 */
-console.log(document.querySelectorAll("p"));
-console.log(document.querySelector("div"));
+console.log(document.querySelectorAll("p")); //task 1.1
+console.log(document.querySelector("div")); //task 1.2
+
+const paragraph = document.querySelectorAll("p");
+for(const text of paragraph){
+  console.log(text.innerText);
+};
 
 /*
 Task 2
