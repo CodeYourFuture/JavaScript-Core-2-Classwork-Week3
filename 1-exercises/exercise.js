@@ -28,7 +28,12 @@ console.log(document.querySelector("div")); //task 1.2
 const paragraph = document.querySelectorAll("p");
 for(const text of paragraph){
   console.log(text.innerText);
-};
+}; //task1.1-a
+
+
+console.log(document.querySelector("#jumbotronText")); //task1.2
+
+console.log(document.querySelectorAll(".primary-content p"));
 
 /*
 Task 2
