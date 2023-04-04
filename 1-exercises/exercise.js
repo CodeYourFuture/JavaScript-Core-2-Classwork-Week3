@@ -11,8 +11,7 @@ Task 1
 Write JavaScript below that console.logs:
     1. all the "p" element nodes of the document,
     --> should log a list of nodes with a length of 6
-
-   
+  
 
     2. the first div element node
     --> should log the ".site-header" node
