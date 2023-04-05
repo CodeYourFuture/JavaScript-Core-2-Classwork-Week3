@@ -41,6 +41,10 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+let alertButton = document.querySelector("#alertBtn");
+alertButton.addEventListener("click",function(event){
+  alert("Thanks for visiting Bikes for Refugees!");
+});
 
 
 /*
@@ -51,8 +55,14 @@ When a user clicks the 'Change colour' button, the background colour of the page
 Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
-const backgroundColor = document.querySelector("body");
-backgroundColor.classList.add("background--red");
+let backgroundColor = document.querySelector("#bgrChangeBtn");
+function changeBackground(event){
+  let body = document.querySelector("body");
+  body.classList.add("background--red");
+};
+backgroundColor.addEventListener("click", changeBackground);
+
+
 
 
 
