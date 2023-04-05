@@ -66,13 +66,15 @@ Task 4
 When a user clicks the 'Larger links!' button, the text of all links on the page should increase.
 */
 const largeLinks = document.querySelector("#largerLinksBtn");
-largeLinks.addEventListener("click", function (event) {
-  event.preventDefault();
-  const red = document.querySelector("body");
-  red.classList.add("background--red");
+largeLinks.addEventListener("click", function () {
+  let largeLink = document.querySelectorAll("a");
+  for (let linkT of largeLink) {
+    linkT.style.fontSize = "larger";
+  }
 });
+
 /*
-Task 5
+Task 5  
 ======
 
 When a user clicks the 'Add some text' button, the text in the input field should be 
