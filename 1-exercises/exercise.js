@@ -73,10 +73,21 @@ Task 4
 When a user clicks the 'Larger links!' button, the text of all links on the page should increase.
 */
 
-const links = document.querySelectorAll("a");
-for(const aTag of links){
-  aTag.classList.add("larger");
-}
+const links = document.querySelector("#largerLinksBtn");
+
+function changeSize(){
+  for(const item of document.querySelectorAll("a")){
+    item.classList.add("larger");
+  };
+};
+
+links.addEventListener("click", changeSize);
+
+
+
+
+
+
 
 
 /*
