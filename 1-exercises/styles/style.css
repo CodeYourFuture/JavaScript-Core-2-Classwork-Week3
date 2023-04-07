@@ -10,6 +10,10 @@ body {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+.larger {
+  font-size: larger;
+}
+
 .site-footer {
   margin-top: 4em;
 }
