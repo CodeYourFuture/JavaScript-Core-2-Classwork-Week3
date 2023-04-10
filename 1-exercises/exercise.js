@@ -11,9 +11,17 @@ Task 1
 Write JavaScript below that console.logs:
     1. all the "p" element nodes of the document,
     --> should log a list of nodes with a length of 6
+    
+    document.querySelectorAll("p")
+    (or)
+    const p = document.querySelectorAll("p");
+    console.log(p);
 
+    ==> NodeList(6) [p.lead, p.article-lead, p.article-lead, p.article-lead, p.article-lead, p.text-center]
+      
     2. the first div element node
     --> should log the ".site-header" node
+    
 
     3. the element with id "jumbotronText"
     --> should log the "#jumbotronText" node
@@ -30,7 +38,12 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+let alertBtn = document.querySelector("#alertBtn");
 
+alertBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  alert("Thanks for visiting Bikes for Refugees!");
+});
 
 /*
 Task 3
