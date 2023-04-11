@@ -106,24 +106,25 @@ function makeRed() {
 function makeRed() {
   document.body.classList.add("background-red");
 } 
-const buttonChangeBackground = document.querySelector("#bgrChangeBtn");
+const buttonChangeBackgroundToRed = document.querySelector("#bgrChangeBtn");
 
-buttonChangeBackground.addEventListener("click", makeRed);
+buttonChangeBackgroundToRed.addEventListener("click", makeRed);
 
 /*
 // Method 2:
-const buttonChangeBackground = document.querySelector("#bgrChangeBtn");
+const buttonChangeBackgroundToRed = document.querySelector("#bgrChangeBtn");
 
-buttonChangeBackground.addEventListener("click", function() {
+buttonChangeBackgroundToRed.addEventListener("click", function() {
   document.body.classList.add("background-red");
 });
 */
 
-// let buttonConvertBackgroundColour = document.querySelector("#bgrChangeBtn");
+/* 
+let buttonConvertBackgroundColour = document.querySelector("#bgrChangeBtn");
 
-// buttonConvertBackgroundColour.addEventListener("click", function() {
-//   document.querySelector("body").classList.add("background-red");
-// })
+  buttonConvertBackgroundColour.addEventListener("click", function() {
+  document.querySelector("body").classList.add("background-red");
+*/
 
 /*
 Task 4
@@ -145,6 +146,8 @@ for (const link of allLinks) {
 */
 
 /*
+// document.querySelectorAll("a").forEach((a) => (a.style.fontSize = "2em"));
+
 // practice from video- change the font size by setting each of the links with a CSS class
 
 const listOfLinks = document.querySelectorAll("a");
@@ -168,20 +171,12 @@ buttonForLargerText.addEventListener("click", makeFontLarger);
 // Method 2:
 const buttonForLargerText = document.querySelector("#largerLinksBtn");
 
+const allLinks = document.querySelectorAll("a");
+
 buttonForLargerText.addEventListener("click", function() {
-  document.querySelectorAll("a").map(a => a.classList.add("larger"))
+  [...allLinks].map(a => a.classList.add("larger"))
 });
 */
-
-// // document.querySelectorAll("a").forEach((a) => (a.style.fontSize = "2em"));
-
-// let buttonAddText = document.querySelector("#largerLinksBtn");
-
-// buttonAddText.addEventListener("click", function() {
-//   document.querySelector("body").classList.add("larger");
-// })
-
-// document.querySelectorAll("a").forEach(a => a.classList.add("larger"));
 
 /*
 Task 5
@@ -198,6 +193,20 @@ Psedocode:
 3. displays it in the textarea.
 */
 
+const buttonToAddComments = document.querySelector("#addArticleBtn");
+
+buttonToAddComments.addEventListener("click", function (event){
+  // preventDefault will stop the page from refreshing when we click on the button
+  event.preventDefault();
+  // finding the input element 
+  const inputElement = document.querySelector("#addArticleInput");
+  // create a new paragraph element
+  const newPElement = document.createElement("p");
+  // set the inner text to the value of the input element
+  newPElement.innerText = inputElement.value;
+  // add the new paragraph element with the input value inside the div #addArticle in the page
+  document.querySelector("#addArticle").appendChild(newPElement);
+})
 
 
 // document.querySelector("#addArticleBtn").addEventListener("click", function(){

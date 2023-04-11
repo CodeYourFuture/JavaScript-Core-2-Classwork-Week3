@@ -82,7 +82,8 @@ body {
   border-bottom: 1px solid #dccdc6;
   font-size: 1rem;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: uppercase
+// document.querySelectorAll("a").forEach(a => a.classList.add("larger"));;
 }
 
 .heading-underline:before {
