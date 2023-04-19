@@ -66,11 +66,19 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
-const alertBtn = document.querySelector("#alertBtn");
-alertBtn.addEventListener("click", function(event){
+
+let alertBtn = document.querySelector("#alertBtn");
+function doAlert(event){
   event.preventDefault();
-  alert("Thanks for visiting Bikes for Refugees!");
-})
+  alert("Thanks for visiting Bikes for Refugees!"); 
+}
+alertBtn.addEventListener("click", doAlert);
+
+// WITH ANONYMOUS FUNCTION
+
+alertBtn.addEventListener("click", function(){
+  alert("Thanks for visiting Bikes for Refugees!")
+});
 
 
 /*
