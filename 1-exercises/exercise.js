@@ -3,7 +3,7 @@
   - Install the Live Server plugin
   - Right click on index.html and select "Open with Live Server"
 */
-
+console.log("This is a Test!")
 /*
 Task 1
 =======
@@ -22,16 +22,31 @@ Write JavaScript below that console.logs:
     --> should log a list of nodes with a length of 3
 
 */
-
-
+//1.
+const elementP = document.querySelectorAll("p");
+console.log(elementP);
+//2.
+const elementDiv = document.querySelector("div");
+console.log(elementDiv);
+//3.
+const elementId = document.querySelector("#jumbotronText");
+console.log(elementId);
+//4.
+const allElementP = document.querySelector(".primary-content").querySelectorAll("p");
+console.log(allElementP);
 /*
 Task 2
 ======
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+const alertBox = document.querySelector("#alertBtn")
 
-
+function alertByClick(event){
+alert("Thanks for visiting Bikes for Refugees!");
+event.preventDefault();
+}
+alertBox.addEventListener("click",alertByClick);
 /*
 Task 3
 =======
@@ -47,7 +62,9 @@ Task 4
 
 When a user clicks the 'Larger links!' button, the text of all links on the page should increase.
 */
-
+for(const link of document.querySelectorAll("a")){
+  link.style.fontSize = "1.5em";
+}
 
 /*
 Task 5
