@@ -49,7 +49,12 @@ When a user clicks the 'Change colour' button, the background colour of the page
 Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
-
+let backgroundColor = document.querySelector("#bgrChangeBtn");
+function turnRed(event){
+  let body = document.querySelector("body");
+  body.classList.add("background--red");
+};
+backgroundColor.addEventListener("click", turnRed);
 /*
 Task 4
 ======
