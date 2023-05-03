@@ -24,7 +24,7 @@ Write JavaScript below that console.logs:
 */
 // 1. all the "p" element nodes of the document,
 // --> should log a list of nodes with a length of 6
-//console.log(document.querySelectorAll("p"));
+console.log(document.querySelectorAll("p"));
 
 //test printing content of first p with .innerText
 // console.log(document.querySelector("p").innerText);
@@ -42,7 +42,7 @@ Write JavaScript below that console.logs:
 
 // 2. the first div element node
 //     --> should log the ".site-header" node
-// console.log(document.querySelector("div"));
+console.log(document.querySelector("div"));
 
 // const ids = document.querySelectorAll("id");
 // const jumid = [...ids].filter((id) => id === "jumbotronText");
@@ -50,13 +50,13 @@ Write JavaScript below that console.logs:
 
 //    3. the element with id "jumbotronText"
 //   --> should log the "#jumbotronText" node
-// console.log(document.querySelectorAll("#jumbotronText"));
+console.log(document.querySelectorAll("#jumbotronText"));
 
 // 4. all the "p" elements of contained inside the .primary-content element node
 // --> should log a list of nodes with a length of 3
 //I think I got the question wrongly, my understanding is to log all p's inside the primary-content class which there is only one p
 
-// console.log(document.querySelectorAll(".primary-content"));
+// console.log(document.querySelectorAll(".primary-content")); // this one didn't work
 const primaryContent = document.querySelector(".primary-content");
 console.log(primaryContent);
 const asd = primaryContent.querySelectorAll("p");
@@ -88,11 +88,9 @@ Hint: can you do this with a CSS class instead of adding styles to the element?
 const changeBckColor = document.querySelector("#bgrChangeBtn");
 const bodyElement = document.querySelector("body");
 changeBckColor.addEventListener("click", function () {
-  bodyElement.setAttribute("class", "background-color");
+  // return bodyElement.setAttribute("class", "background-color");
+  bodyElement.style.backgroundColor = "red";
 });
-
-// I added a class in style.css with background color then add the class the body element here
-// is this the correct way to do it ?
 
 /*
 Task 4
@@ -102,24 +100,44 @@ When a user clicks the 'Larger links!' button, the text of all links on the page
 */
 
 const largerButton = document.querySelector("#largerLinksBtn");
-const allLinks = document.querySelectorAll("a"); // will try only one coz of the loop thing
-console.log(allLinks);
 
+const allLinks = document.querySelectorAll("a");
 
-largerButton.addEventListener("click", makeLinksLarger());
+const makeLinksLarger = function () {
+  for (let i = 0; i < allLinks.length; i++) {
+    allLinks[i].style.fontSize = "2rem";
+  }
+};
 
-const loopThroughLinks = allLinks.map( link => link );
+largerButton.addEventListener("click", makeLinksLarger);
 
-function makeLinksLarger() {
-  allLinks.setAttribute("class", "larger-links");
-}
-// How to change or to set an css attributes from JS 
+// const loopThroughLinks = allLinks.map((link) => link);
 
+// How to change or to set an css attributes from JS
 
 /*
 Task 5
 ======
-
-When a user clicks the 'Add some text' button, the text in the input field should be appended to the page as a new paragraph below it.
+When a user clicks the 'Add some text' button,
+the text in the input field should be appended to the page as a new paragraph below it.
 Hint: the new paragraph should be appended to the element with id 'addArticle'.
 */
+
+let addSomeTextEl = document.getElementById("addArticleBtn");
+
+const addSomeTextFunction = function () {
+  let newParagraph = document.createElement("p");
+  console.log("newParagraph" + newParagraph);
+  let inputContent = document.getElementById("addArticleInput").value;
+  console.log("inputContent" + inputContent);
+
+  newParagraph.innerHTML = inputContent;
+  console.log("newParagraph after adding Inner " + newParagraph.innerHTML);
+
+  let addNewParagraphHere = document.getElementById("addArticle");
+  console.log(addNewParagraphHere);
+
+  addNewParagraphHere.appendChild(newParagraph); // console.log(inputContent);
+};
+
+addSomeTextEl.addEventListener("click", addSomeTextFunction);
