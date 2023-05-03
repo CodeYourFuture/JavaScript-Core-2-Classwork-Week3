@@ -26,20 +26,6 @@ Write JavaScript below that console.logs:
 // --> should log a list of nodes with a length of 6
 console.log(document.querySelectorAll("p"));
 
-//test printing content of first p with .innerText
-// console.log(document.querySelector("p").innerText);
-
-//trying to print content of all p with .innerText but it gave me undefined
-//I guess it is because we need to loop through the p's as they are node list like an array of objects
-// console.log(document.querySelectorAll("p").innerText);
-
-//to print content of all p : first store all p's in variable then using map make a new array with
-//.inner text
-
-// const allP = document.querySelectorAll("p");
-// const arrayofpContent = [...allP].map((p) => p.innerText);
-// console.log(arrayofpContent);
-
 // 2. the first div element node
 //     --> should log the ".site-header" node
 console.log(document.querySelector("div"));
@@ -100,20 +86,13 @@ When a user clicks the 'Larger links!' button, the text of all links on the page
 */
 
 const largerButton = document.querySelector("#largerLinksBtn");
-
 const allLinks = document.querySelectorAll("a");
-
 const makeLinksLarger = function () {
   for (let i = 0; i < allLinks.length; i++) {
     allLinks[i].style.fontSize = "2rem";
   }
 };
-
 largerButton.addEventListener("click", makeLinksLarger);
-
-// const loopThroughLinks = allLinks.map((link) => link);
-
-// How to change or to set an css attributes from JS
 
 /*
 Task 5
@@ -127,17 +106,10 @@ let addSomeTextEl = document.getElementById("addArticleBtn");
 
 const addSomeTextFunction = function () {
   let newParagraph = document.createElement("p");
-  console.log("newParagraph" + newParagraph);
   let inputContent = document.getElementById("addArticleInput").value;
-  console.log("inputContent" + inputContent);
-
   newParagraph.innerHTML = inputContent;
-  console.log("newParagraph after adding Inner " + newParagraph.innerHTML);
-
   let addNewParagraphHere = document.getElementById("addArticle");
-  console.log(addNewParagraphHere);
-
-  addNewParagraphHere.appendChild(newParagraph); // console.log(inputContent);
+  addNewParagraphHere.appendChild(newParagraph);
 };
 
 addSomeTextEl.addEventListener("click", addSomeTextFunction);
