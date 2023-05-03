@@ -22,7 +22,10 @@ Write JavaScript below that console.logs:
     --> should log a list of nodes with a length of 3
 
 */
-
+console.log (document.querySelectorAll("p"));
+console.log(document.querySelector("div"));
+console.log(document.querySelector("#jumbotron.Text"));
+console.log(document.querySelectorAll(".primary-content p"));
 
 /*
 Task 2
@@ -31,6 +34,12 @@ Task 2
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
 
+const alertBtn = document.querySelector("#alertBtn");
+
+alertBtn.addEventListener ("click", function doAlert ()
+{
+  alert("Thanks for visiting Bikes For Refugees!");
+});
 
 /*
 Task 3
@@ -40,7 +49,12 @@ When a user clicks the 'Change colour' button, the background colour of the page
 Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
-
+let backgroundColor = document.querySelector("#bgrChangeBtn");
+function turnRed(event){
+  let body = document.querySelector("body");
+  body.classList.add("background--red");
+};
+backgroundColor.addEventListener("click", turnRed);
 /*
 Task 4
 ======
