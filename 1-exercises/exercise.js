@@ -22,7 +22,10 @@ Write JavaScript below that console.logs:
     --> should log a list of nodes with a length of 3
 
 */
-
+console.log (document.querySelectorAll("p"));
+console.log(document.querySelector("div"));
+console.log(document.querySelector("#jumbotron.Text"));
+console.log(document.querySelectorAll(".primary-content p"));
 
 /*
 Task 2
