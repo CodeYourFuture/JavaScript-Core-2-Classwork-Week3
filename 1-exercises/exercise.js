@@ -36,7 +36,7 @@ When a user clicks the 'ALERT' button, an alert box should pop up with the text 
 
 const alertBtn = document.querySelector("#alertBtn");
 
-alertBtn.addEventListener ("click", function doALert ()
+alertBtn.addEventListener ("click", function doAlert ()
 {
   alert("Thanks for visiting Bikes For Refugees!");
 });
