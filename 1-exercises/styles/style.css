@@ -10,6 +10,19 @@ body {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+
+/* new classes for excercise  */
+/* .background-color{
+  background-color: red;
+
+} */
+
+.larger-links{
+  font-size: larger;
+}
+
+
+
 .site-footer {
   margin-top: 4em;
 }
