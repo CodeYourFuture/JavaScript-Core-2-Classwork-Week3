@@ -56,10 +56,10 @@ Hint: can you do this with a CSS class instead of adding styles to the element?
 */
 
 let bgrChangeBtn = document.querySelector("#bgrChangeBtn");
-function changeBackground() {
-  document.body.style.background = "red";
+function changeBackground(color) {
+  document.body.style.background = color;
 }
-bgrChangeBtn.addEventListener("click", changeBackground);
+bgrChangeBtn.addEventListener("click", () => changeBackground("red"));
 
 /*
 Task 4
