@@ -42,9 +42,8 @@ When a user clicks the 'ALERT' button, an alert box should pop up with the text 
 */
 const alertBox = document.querySelector("#alertBtn")
 
-function alertByClick(event){
+function alertByClick(){
 alert("Thanks for visiting Bikes for Refugees!");
-event.preventDefault();
 }
 alertBox.addEventListener("click",alertByClick);
 /*
@@ -69,13 +68,14 @@ When a user clicks the 'Larger links!' button, the text of all links on the page
 const largerTextBtn = document.querySelector("#largerLinksBtn");
 
  function makeFontLarger () {
-   document.querySelectorAll("a").forEach(a => a.classList.add("larger"));
+   document.querySelectorAll("a").forEach((a) => a.classList.add("larger"));
  }
 
  largerTextBtn.addEventListener("click", makeFontLarger);
-for(const link of document.querySelectorAll("a")){
-  link.style.fontSize = "1.5em";
-}
+ 
+//for(const link of document.querySelectorAll("a")){
+//  link.style.fontSize = "1.5em";
+//}
 
 /*
 Task 5
