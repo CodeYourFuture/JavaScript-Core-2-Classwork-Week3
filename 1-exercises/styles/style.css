@@ -120,8 +120,7 @@ body {
 }
 
 .larger {
-   font-weight: 900; 
-    font-size: large ;  
+    font-size: larger;  
 }
 @media screen and (min-width: 992px) {
   .navbar-brand > img {
